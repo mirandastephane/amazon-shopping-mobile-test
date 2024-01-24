@@ -18,7 +18,7 @@ Automate testing for a minimum of 2 functionalities of the mobile application
 Download the dependencies:
 
 ```shell
-  pip install Appium-Python-Client;
+  pip install Appium-Python-Client
 ```
 Run one test Class:
 ```shell
