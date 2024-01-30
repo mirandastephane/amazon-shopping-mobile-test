@@ -2,6 +2,7 @@ import unittest
 
 from src.test.core.UtilMethods import UtilMethods
 from src.test.managers.DriverManagerLocal import DriverManagerLocal
+from src.test.pages.CancelItensPage import CancelItensPage
 from src.test.pages.HelpPage import HelpPage
 from src.test.pages.HomePage import HomePage
 from src.test.pages.SideMenuPage import SideMenuPage
@@ -17,15 +18,18 @@ class CustomerServiceTest(unittest.TestCase):
         side_menu_page = SideMenuPage(self.driver)
         util_methods = UtilMethods(self.driver)
         help_page = HelpPage(self.driver)
+        cancel_itens_page = CancelItensPage(self.driver)
+
+        option_text = "Cancel Items or Orders"
 
         home_page.go_to_menu()
         side_menu_page.select_item_menu("cs")
+        help_page.validate_title_page("Customer Service")
+        util_methods.perform_swipe_action(self.driver)
+        # help_page.select_item_option(option_text)
         help_page.select_item_option("Cancel Items or Orders")
-        util_methods.perform_swipe_action(599, 2795)
-        util_methods.perform_swipe_action(661, 403)
-        help_page.click_button_yes()
+        cancel_itens_page.getTitlePage()
 
-        thank_you_message = help_page.get_thank_you_message()
-        expected_text = "Thank you for your feedback."
 
-        self.assertEqual(thank_you_message, expected_text, "Mensagem não encontrada!")
+        expected_title = "Cancel Items and Orders"
+        self.assertEqual(cancel_itens_page.getTitlePage(), expected_title, "Mensagem não encontrada!")

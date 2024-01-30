@@ -13,5 +13,14 @@ class ProductPage:
         product_button.click()
 
     def add_to_cart(self):
-        add_to_cart_button = self.wait.until(EC.presence_of_element_located((AppiumBy.XPATH, '//android.widget.Button[@resource-id="add-to-cart-button"]')))
+        add_to_cart_button = self.wait.until(EC.presence_of_element_located((AppiumBy.XPATH, '//android.widget.Button[@text="Add to cart"]')))
         add_to_cart_button.click()
+
+    def add_to_cart_item_left_off(self):
+        add_to_cart_item_left_off_button = self.wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "(//android.widget.Button[@text=\"Add to Cart\"])[1]")))
+        add_to_cart_item_left_off_button.click()
+
+    def message_item_add(self):
+        add_success = (AppiumBy.XPATH, "//android.widget.TextView[@text=\"Item Added\"]")
+        message_add = self.wait.until(EC.presence_of_element_located(add_success))
+        return message_add.text

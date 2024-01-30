@@ -10,6 +10,7 @@ class SideMenuPage:
         self.wait = WebDriverWait(self.driver, 10)
 
     def select_item_menu(self, option_name):
-        item_locator = (AppiumBy.XPATH, f"//android.view.View[@resource-id=\"{option_name}\"]")
+        element = f"//android.view.View[@resource-id=\"{option_name}\"]"
+        item_locator = (AppiumBy.XPATH, element)
         item_button = self.wait.until(EC.presence_of_element_located(item_locator))
         item_button.click()
