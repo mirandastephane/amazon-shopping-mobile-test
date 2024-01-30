@@ -29,19 +29,17 @@ class CartPage:
         cart_icon.click()
 
     def go_to_pick_up_left_off(self):
-        left_off_option = self.wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@text=\"Pick up where you left off\"]")))
+        left_off_option = self.wait.until(EC.presence_of_element_located(
+            (AppiumBy.XPATH, "//android.widget.TextView[@text=\"Pick up where you left off\"]")))
         left_off_option.click()
 
-        """
-el3 = driver.find_element(by=AppiumBy.XPATH, value="(//android.widget.Button[@text=\"Add to Cart\"])[1]")
-el3.click()
-        """
-
     def selected_item_left_off(self):
-        left_off_item= self.wait.until(EC.presence_of_element_located(
-            (AppiumBy.XPATH, "//android.view.ViewGroup[@content-desc=\"Sheet\"]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup")))
+        left_off_item = self.wait.until(EC.presence_of_element_located(
+            (AppiumBy.XPATH,
+             "//android.view.ViewGroup[@content-desc=\"Sheet\"]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup")))
         left_off_item.click()
 
     def get_cart_count(self):
-        cart_count = self.wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.amazon.mShop.android.shopping:id/cart_count")))
+        cart_count = self.wait.until(
+            EC.presence_of_element_located((AppiumBy.ID, "com.amazon.mShop.android.shopping:id/cart_count")))
         return cart_count.text
