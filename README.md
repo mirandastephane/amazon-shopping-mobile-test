@@ -2,6 +2,12 @@
 
 This project pertains to the Mobile Testing course within the Agile Testing postgraduate program at Cesar School.
 
+## Team
+
+Carina Sá Leitao
+Roberto Souza
+Stephane Miranda
+
 ## Escope 
 
 Automate testing for a minimum of 2 functionalities of the mobile application
