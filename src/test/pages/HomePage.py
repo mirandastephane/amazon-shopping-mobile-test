@@ -1,7 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.common import by
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
 
 class HomePage:
     def __init__(self, driver):
