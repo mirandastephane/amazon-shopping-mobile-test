@@ -4,9 +4,9 @@ This project pertains to the Mobile Testing course within the Agile Testing post
 
 ## Team
 
-Carina Sá Leitao
-Roberto Souza
-Stephane Miranda
+- Carina Sá Leitao
+- Roberto Souza
+- Stephane Miranda
 
 ## Escope 
 
