@@ -6,6 +6,15 @@ This project pertains to the Mobile Testing course within the Agile Testing post
 
 Automate testing for a minimum of 2 functionalities of the mobile application
 
+### Test Scenarios
+
+ShoppingCartTest
+- test_add_to_cart
+- test_add_to_cart_left_off_item
+
+CustomerServiceTest
+- test_access_knowledge_base
+
 ## Prerequisite
  - Python 3.11.7
  - Node.js and npm
